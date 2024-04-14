@@ -28,3 +28,10 @@ def menu():
     elif dec == "3":
         break
 
+def decode(encoded_pass):
+    decoded_pass = ""
+    for digit in str(encoded_password):
+        # Shift each digit down by 3 numbers
+        new_digit = str((int(digit) - 3) % 10)
+        decoded_pass += new_digit
+    return decoded_password
